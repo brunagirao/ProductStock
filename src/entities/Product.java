@@ -35,4 +35,36 @@ public class Product {
 	}
 	
 	
+	public void addProduct(int quantity) {
+		
+		this.quantity += quantity;
+	}
+	
+	public void removeProduct(int quantity) {
+		
+		this.quantity -= quantity;
+	}
+
+
+	public double totalInStock() {
+		
+		double total = 0.0;
+		
+		total = this.quantity * this.price;
+		
+		return total;
+	}
+	
+	@Override
+	public String toString() {
+		return "Product \n"
+				+ "Name()=" + getName() 	+ "\n"
+				+ "Price()=" + getPrice()	+ "\n"
+				+ "Quantity()=" + getQuantity();
+			
+	}
+	
+	
+	
+	
 }
